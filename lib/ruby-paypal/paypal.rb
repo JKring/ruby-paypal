@@ -446,6 +446,16 @@ class Paypal
         }
         make_nvp_call(params)
       end
+      
+      #
+      # Gets balance.
+      #
+      def get_balance
+        params = {
+          'METHOD' => 'GetBalance'
+        }
+        make_nvp_call(params)
+      end
 
       #
       # Makes the call to the PayPal NVP API. This is the workhorse method for the other method calls.
